@@ -28,4 +28,9 @@ class WebSocket
     public static function onClose(Server $server, $fd)
     {
     }
+
+    public static function onTask($server,$task){
+        $data = $task->data;
+        echo 'server on task, data: ' . $data . PHP_EOL; 
+    }
 }
